@@ -108,23 +108,48 @@ article h1 {
   white-space: nowrap;
 }
 
-.main h2 {
+.main h2,
+.main h3 {
   color: var(--nav-bg-color);
+  margin-top: 20px;
 }
 
-.main p {
+.main h2:first-of-type {
+  margin-top: -20px;
+}
+
+.main .description,
+.list {
   color: var(--text-dark);
   font-size: 16px;
   margin-top: 4px;
 }
 
-.main p a {
+.main p a,
+.main .learning a {
   color: var(--nav-bg-color);
   text-decoration: none;
   text-align: justify;
 }
 
 .main p a:hover,
-.main p a:visited {
+.main p a:visited,
+.main .learning a:hover,
+.main .learning a:visited {
   color: var(--other);
+}
+
+.list {
+  list-style: none inside;
+}
+
+.list li::before {
+  content: "✅ ";
+}
+
+.main .list:nth-of-type(3) li {
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 6px;
 }
