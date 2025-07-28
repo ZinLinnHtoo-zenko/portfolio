@@ -47,6 +47,7 @@ body {
 main {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 8px;
 }
 
 /* Adjust items columns */
@@ -82,6 +83,7 @@ main {
   z-index: 10;
   border-radius: 50%;
   padding: 4px;
+  transition: all 0.5s ease;
 }
 
 .profile-pic-figure img {
@@ -140,7 +142,7 @@ h3 {
   margin-top: 4px;
 }
 
-.main p a,
+.main .description a,
 .main .list a {
   color: var(--nav-bg-color);
   text-decoration: none;
@@ -172,4 +174,24 @@ h3 {
 .main .list:nth-of-type(3) li {
   line-height: 1.5rem;
   margin-bottom: 6px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 60px;
+  padding: 12px;
+}
+
+.contact p a {
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .profile-pic-figure {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+  }
 }
